@@ -1,6 +1,8 @@
 <h1>Seja bem vindo ao nosso site de criação de moedas!</h1>
 <p>Aqui você pode criar e gerenciar suas próprias moedas digitais.</p>
-<%= link_to 'Vamos para moedas.', coins_path %>
+<ul>
+<li><%= link_to 'Cadastro de Moedas', coins_path %></li>
+</ul>
 <br>
 <p id="current-time"><%= l(Time.current, format: "%d/%m/%Y %H:%M:%S") %></p>
 
