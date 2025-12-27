@@ -1,21 +1,13 @@
-<h1>Seja bem vindo ao nosso site de criação de moedas!</h1>
+<h1><%= name_app %></h1>
+
+<h2><%= welcome_message %>, <%= @nome || "Visitante" %>!</h2>
+
+<p><strong>Data: </strong><%= dataBR(Date.today) %></p>
+
 <p>Aqui você pode criar e gerenciar suas próprias moedas digitais.</p>
-<ul>
-<li><%= link_to 'Cadastro de Moedas', coins_path %></li>
-</ul>
-<br>
-<p id="current-time"><%= l(Time.current, format: "%d/%m/%Y %H:%M:%S") %></p>
 
-<script>
-    function updateTime() {
-        const currentTimeElement = document.getElementById('current-time');
-        const now = new Date();
-        const formattedTime = now.toLocaleString('pt-BR', { 
-            year: 'numeric', month: '2-digit', day: '2-digit', 
-            hour: '2-digit', minute: '2-digit', second: '2-digit' 
-        });
-        currentTimeElement.innerText = formattedTime;
-    }
+<%= render 'menu' %>
 
-    setInterval(updateTime, 1000);
-</script>
+<p>Você está em ambiente de <strong><%= ambiente_rails %></strong></p>
+
+<h4><%= anoBR(Date.today) %>® - <%= @curso %></h4>
